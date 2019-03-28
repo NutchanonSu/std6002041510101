@@ -6,11 +6,15 @@ class Card extends Component {
     render() {
         return (
             <View>
+                <Image
+                    style={{width: 100, height: 100}}
+                    source={{uri: 'https://goo.gl/QwLk72'}}
+                />
                 <Text>Meteora</Text>
                 <Text>Linkin Park</Text>
                 <CardSection>
                 <Image
-                    style={{width: 420, height: 400}}
+                    style={{width: 320, height: 300}}
                     source={{uri: 'https://goo.gl/1EBWpY'}}
                 />
                 </CardSection>
