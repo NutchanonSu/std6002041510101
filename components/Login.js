@@ -5,6 +5,9 @@ import axios from 'axios';
 
 // write component
 class Login extends Component {
+    static navigationOptions ={
+        title: 'Login'
+    }
     constructor() {
         super()
         this.state = {
@@ -12,6 +15,9 @@ class Login extends Component {
             password: ''
         }
         this.onChangeEmail = this.onChangeEmail.bind(this)
+    }
+    componentDidMount(){
+
     }
     onChangeEmail(e) {
         console.log('onChangeEmail', e)
