@@ -7,6 +7,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "AsyncStorage": "^0.1.5",
+    "async-storage": "^0.1.0",
     "axios": "^0.18.0",
     "react": "16.8.3",
     "react-native": "0.59.0",

@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { View, Text, TextInput, Button } from 'react-native';
 import axios from 'axios';
+import { NavigationEvents } from 'react-navigation';
 
 // write component
 class Login extends Component {
@@ -14,10 +15,11 @@ class Login extends Component {
             email: '',
             password: ''
         }
-        this.onChangeEmail = this.onChangeEmail.bind(this)
+        //this.onChangeEmail = this.onChangeEmail.bind(this)
     }
     componentDidMount(){
-
+        const {navigate} = this.props.navigation;
+        return navigate('Profile')
     }
     onChangeEmail(e) {
         console.log('onChangeEmail', e)
@@ -31,10 +33,12 @@ class Login extends Component {
         const url = 'http://128.199.240.120:9999/api/auth/login'
         axios.post(url, this.state)
             .then(response => {
-                console.log('token', response.data.data.token)
+                console.log('@storage_Token', response.data.data.token)
             })
     }
     render () {
+        const {navigate} = this.props.navigation;
+        return navigate('Profile')
         return (
             <View>
                 <TextInput 
