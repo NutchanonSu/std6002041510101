@@ -1,35 +1,36 @@
-// import library
 import React from 'react';
 import { View, Text } from 'react-native';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 import Header from './Header';
 import Card from './Card';
-import Login from './Login';
-//import Me from './Me';
-//import {createStackNavigator, createAppContainer} from 'react-navigation';
+import LoginScr from './Login';
+import ProfileScr from './profile';
 
-// write component
+
 /*
-const AppNavigator = createStackNavigator(
-    {
-        Login: Login,
-        Me: Me
-    }, {
-        // initialRouteName: "Login"
-        initialRouteName: "Me"
-    }
-);
-*/
 class App extends React.Component {
     render() {
         return (
-            // component about react native
+        
             <View>
-                <Header title="Login" />
-                <Login />
+                <Header title="LOGIN"/>
+                <Login/>
+                { <Text  style={{ fontSize:32 }} >Kantapong Chaloemkitwanit S60020141520026</Text>
+                <Card/> }
             </View>
         );
     }
 }
+export default App;
+*/
+const MainNavigator = createStackNavigator({
+	Login: {screen : LoginScr},
+	Profile: { screen : ProfileScr }
+},{
+	initialRouteName: "Login"
+	
+});
 
-// export
+const App = createAppContainer(MainNavigator);
+
 export default App;
