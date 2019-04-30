@@ -10,8 +10,8 @@ class Login extends Component{
 	static navigationOptions = {
 			title: "Login",
 			headerStyle:{
-				backgroundColor: '#000000',
-				color: '#FFFFFF',
+				backgroundColor: 'white',
+				color: 'white',
 				fontSize: 20,
 				},
                 headerTintColor: "#6598FF",
@@ -78,9 +78,7 @@ class Login extends Component{
     render(){
         return(
             <View style={styles.container}>
-                <Image style={{ width:100,height:100}} source={{uri: 'https://png.icons8.com/key-2/ultraviolet/50/3498db'}}/>
                 <View style={styles.inputContainer}>
-                <Image style={styles.inputIcon} source={{uri: 'https://png.icons8.com/message/ultraviolet/50/3498db'}}/>
                 <TextInput
                     style={styles.inputs}
                     placeholder ="Email"
@@ -92,7 +90,6 @@ class Login extends Component{
                 />
                 </View>
                 <View style={styles.inputContainer}>
-                    <Image style={styles.inputIcon} source={{uri: 'https://png.icons8.com/key-2/ultraviolet/50/3498db'}}/>
                     <TextInput
                         style={styles.input}
                         placeholder ="Password"
@@ -103,11 +100,10 @@ class Login extends Component{
                     />
                 </View>
                     
-                <View style={{width:350,borderRadius:30}}>
+                <View style={{width:350}}>
                 <Button
-                    style={{borderRadius:30}}
                     title="Login"
-                    color="#2332CC"
+                    color="#f38181"
                     onPress={this.onPressLogin}
 
 
@@ -127,12 +123,11 @@ const styles = StyleSheet.create({
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#6598FF',
+      backgroundColor: '#ffb677',
     },
     inputContainer: {
         borderBottomColor: '#F5FCFF',
         backgroundColor: '#FFFFFF',
-        borderRadius:30,
         borderBottomWidth: 1,
         width:350,
         height:45,
@@ -159,7 +154,6 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       marginBottom:20,
       width:250,
-      borderRadius:30,
     },
     loginButton: {
       backgroundColor: "#00b5ec",
